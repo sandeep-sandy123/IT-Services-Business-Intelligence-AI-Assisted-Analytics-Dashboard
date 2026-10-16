@@ -2,8 +2,6 @@
 
 An end-to-end Power BI portfolio project for exploring the operational and financial performance of a fictional IT services business. It combines a SQL Server data source, Power Query preparation, a Power BI data model, DAX measures, and a five-page interactive report.
 
-> **Data notice:** This project uses synthetic data for demonstration and learning. It is not real customer, employee, financial, or operational data, and it must not be presented as proprietary data from Xscade or any other real organization.
-
 ## Project overview
 
 The dashboard brings together client, service, project, staffing, invoice, feedback, and calendar data. It is designed to help users review revenue and service performance, project delivery, client patterns, and resource utilization.
@@ -169,13 +167,3 @@ IT-Services-BI-Dashboard/
 └── data/
     └── [synthetic dataset file, if you intend to share it]
 ```
-
-Only include files you have permission to share. Avoid committing credentials, private data, or database backups that should not be distributed. Check the PBIX for local paths or credentials before sharing.
-
-## Next steps
-
-1. Verify table names, model relationships, measures, and visuals against the PBIX and database.
-2. Confirm the five screenshot files are uploaded to [docs/screenshots/](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/tree/main/docs/screenshots) with the names shown above.
-3. Replace the setup placeholders with local, non-secret connection details or instructions.
-4. Fill in **Key insights** with observed values, the date range, and filter context.
-5. Review the repository for sensitive information and keep the synthetic-data disclaimer before sharing.
