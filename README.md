@@ -175,7 +175,7 @@ Only include files you have permission to share. Avoid committing credentials, p
 ## Next steps
 
 1. Verify table names, model relationships, measures, and visuals against the PBIX and database.
-2. Confirm the five screenshot files are uploaded to `docs/screenshots/` with the names shown above.
+2. Confirm the five screenshot files are uploaded to [docs/screenshots/](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/tree/main/docs/screenshots) with the names shown above.
 3. Replace the setup placeholders with local, non-secret connection details or instructions.
 4. Fill in **Key insights** with observed values, the date range, and filter context.
 5. Review the repository for sensitive information and keep the synthetic-data disclaimer before sharing.
