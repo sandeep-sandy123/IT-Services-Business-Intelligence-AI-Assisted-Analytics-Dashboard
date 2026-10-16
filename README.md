@@ -21,6 +21,7 @@ These are intended uses of the dashboard. Confirm the exact definitions and avai
 ## Dashboard preview
 
 Adding the screenshot here:
+##1. executive-overview
 
 ### ![executive-overview](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/01-executive-overview.png)
 
