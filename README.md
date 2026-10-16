@@ -153,4 +153,4 @@ Only include files you have permission to share. Avoid committing credentials, p
 
 ## Documentation
 
-See [`docs/PROJECT_DOCUMENTATION.md`](docs/PROJECT_DOCUMENTATION.md) for a fuller project record and fill-in checklist.
+See [`docs/PROJECT_DOCUMENTATION.md`][(docs/PROJECT_DOCUMENTATION.md)](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/PROJECT_DOCUMENTATION.md) for a fuller project record and fill-in checklist.
