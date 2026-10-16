@@ -76,7 +76,7 @@ Confirm the displayed visuals, slicers, and metric definitions in the PBIX befor
 
 The formulas below are illustrative patterns only. They do not confirm that measures with these names or definitions exist in the project. Adjust table and column names and business rules to match the actual model.
 
-``DAX
+```DAX
 Total Revenue =
 SUM ( Invoices[InvoiceAmount] )
 
