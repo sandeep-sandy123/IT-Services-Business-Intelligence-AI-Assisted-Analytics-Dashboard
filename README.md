@@ -22,8 +22,8 @@ These are intended uses of the dashboard. Confirm the exact definitions and avai
 
 Add the Executive Overview screenshot here:
 
-## [executive-overview](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/01-executive-overview.png)
-
+### ![executive-overview](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/01-executive-overview.png)
+---
 ## Tools and technologies
 
 - Microsoft SQL Server — database and source tables
