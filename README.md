@@ -25,6 +25,13 @@ Adding the screenshot here:
 ### ![executive-overview](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/01-executive-overview.png)
 
 ### ![revenue-service-performance](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/02-revenue-service-performance.png)
+
+### ![project-delivery](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/03-project-delivery.png)
+
+### ![client-analytics](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/04-client-analytics.png)
+
+### ![resource-employee-utilization](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/05-resource-employee-utilization.png)
+
 ---
 ## Tools and technologies
 
