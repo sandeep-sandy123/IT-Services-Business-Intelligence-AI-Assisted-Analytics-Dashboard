@@ -6,7 +6,7 @@ An end-to-end Power BI portfolio project for exploring the operational and finan
 
 ## Project overview
 
-The dashboard brings together client, service, project, staffing, invoice, feedback, and calendar data. It is designed to help a business user review revenue and service performance, delivery progress, client patterns, and resource utilization in one report.
+The dashboard brings together client, service, project, staffing, invoice, feedback, and calendar data. It is designed to help users review revenue and service performance, project delivery, client patterns, and resource utilization in one report.
 
 ### Business objectives
 
@@ -14,9 +14,15 @@ The dashboard brings together client, service, project, staffing, invoice, feedb
 - Review project delivery status, timelines, and workload.
 - Understand client mix and engagement patterns.
 - Explore employee assignments and resource utilization.
-- Combine operational and financial views to support discussion and follow-up.
+- Bring operational and financial views together to support analysis.
 
-These are intended uses of the dashboard; validate the exact definitions and available visuals in the supplied PBIX before treating any metric as a formal business KPI.
+These are intended uses of the dashboard. Confirm the exact definitions and available visuals in the PBIX before treating any metric as a formal business KPI.
+
+## Dashboard preview
+
+Add the Executive Overview screenshot here:
+
+![Executive Overview dashboard](assets/report-preview.png)
 
 ## Tools and technologies
 
@@ -27,11 +33,11 @@ These are intended uses of the dashboard; validate the exact definitions and ava
 
 ## Dataset at a glance
 
-The database is named `ITServicesBI` and contains eight tables. Counts below are the supplied project counts; row counts can differ if the local database has been changed.
+The database is named `ITServicesBI` and contains eight tables. Counts below are the supplied project counts; row counts may differ if the local database has changed.
 
 | Table | Rows | Purpose |
 |---|---:|---|
-| `Clients` | 80 | Client entities and client attributes |
+| `Client` | 80 | Client entities and client attributes |
 | `Services` | 8 | Service categories or offerings |
 | `Projects` | 220 | Project records and delivery attributes |
 | `Employees` | 45 | Employee or resource records |
@@ -40,21 +46,39 @@ The database is named `ITServicesBI` and contains eight tables. Counts below are
 | `Customer_Feedback` | 79 | Customer feedback records |
 | `Calendar` | 2025–2026 | Date dimension covering calendar years 2025 and 2026; row count not supplied |
 
-The project is described as using synthetic data. Confirm column names, key fields, date coverage, and row counts against the database before reproducing the model.
+The model screenshot uses the singular name `Client`. Confirm whether the source database also uses that name; earlier project notes listed it as `Clients`.
+
+The project uses synthetic data. Confirm column names, key fields, date coverage, and row counts against the database before reproducing the model.
 
 ## Data preparation and modeling
 
-The reported workflow is SQL Server → Power Query → Power BI model → DAX measures → report pages. Typical preparation tasks include checking data types, trimming and standardizing text, reviewing nulls and duplicates, and confirming key relationships. Document only the transformations actually present in the PBIX or Power Query steps.
+The reported workflow is:
 
-Before publishing or sharing the report, verify the model's relationship keys, cardinality, filter direction, date table configuration, and whether inactive relationships are used. A likely analytical design is a calendar dimension filtering date-based facts, with client, service, project, and employee dimensions connected to relevant facts; this is a design suggestion, not a claim about the current PBIX schema.
+**SQL Server → Power Query → Power BI model → DAX measures → report pages**
+
+Typical preparation tasks include checking data types, trimming and standardizing text, reviewing nulls and duplicates, and confirming key relationships. Document only the transformations actually present in the Power Query steps.
+
+The model screenshot shows relationships connecting clients, services, calendar dates, projects, project assignments, employees, invoices, and customer feedback. Check the relationship properties in Power BI to confirm the exact join columns, filter directions, and date relationships.
+
+## Dashboard pages
+
+The report contains five pages:
+
+1. **Executive Overview** — high-level summary of business performance.
+2. **Revenue & Service Performance** — review revenue and service-level patterns.
+3. **Project Delivery** — examine project workload and delivery.
+4. **Client Analytics** — explore client-level distribution and engagement.
+5. **Resource & Employee Utilization** — review employee and assignment patterns.
+
+Confirm the displayed visuals, slicers, and metric definitions in the PBIX before describing specific findings.
 
 ## KPI and DAX examples
 
-The formulas below are illustrative patterns only. They are not confirmation that measures with these names or definitions exist in the project. Replace table/column names and business rules to match the actual model. In particular, decide whether invoice revenue means invoice amount, amount paid, or another field, and whether project status values have consistent spelling.
+The formulas below are illustrative patterns only. They do not confirm that measures with these names or definitions exist in the project. Adjust table and column names and business rules to match the actual model.
 
 ```DAX
 Total Revenue =
-SUM ( Invoices[Amount] )
+SUM ( Invoices[InvoiceAmount] )
 
 Invoice Count =
 DISTINCTCOUNT ( Invoices[InvoiceID] )
@@ -73,67 +97,43 @@ CALCULATE (
 
 Project Completion Rate =
 DIVIDE ( [Completed Projects], [Project Count] )
-```
-
-Confirm that the chosen date relationship and filter context match the intended meaning before using time-based measures. Add final measure names, definitions, formats, and validation notes to the documentation once checked in Power BI.
-
-## Dashboard pages
-
-The report has five pages:
-
-1. **Executive Overview** — high-level summary of business performance. Confirm the displayed headline KPIs and default date range in the PBIX.
-2. **Revenue & Service Performance** — review revenue and service-level patterns. Confirm revenue definitions, trends, and service comparisons.
-3. **Project Delivery** — examine project workload and delivery. Confirm status categories, completion logic, and any timing measures.
-4. **Client Analytics** — explore client-level distribution and engagement. Confirm which client dimensions and measures are shown.
-5. **Resource & Employee Utilization** — review employee and assignment patterns. Confirm utilization denominator, capacity assumptions, and the treatment of overlapping assignments.
-
-## Key insights
-
-**To be completed only after checking actual report values.** No numeric findings are asserted in this README. Review the PBIX with its intended filters and date range, record the relevant values, and state the scope and period for each finding. Suggested prompts:
-
-- Which service contributes the largest share of the selected revenue measure, and for what period?
-- How many projects are completed, active, delayed, or otherwise categorized under the report's actual status definitions?
-- Which client or client segment has the greatest activity in the selected period?
-- How is assignment load distributed across employees, and what capacity definition supports any utilization claim?
-- What feedback pattern is visible, and how many feedback records support it?
-
-## Setup and use
-
-1. Install or open a compatible version of Power BI Desktop and SQL Server (or SQL Server Express) with SQL Server Management Studio or another SQL client.
-2. Create or restore the `ITServicesBI` database using the project's SQL scripts or supplied database backup. The actual source files and restore procedure are not included in this documentation yet.
-3. In Power BI Desktop, open the project `.pbix` file from: **`[LOCAL PATH TO PBIX]`**.
-4. If prompted, update the SQL Server connection in Power Query or Data source settings:
-   - Server: **`[LOCAL SERVER OR INSTANCE]`**
-   - Database: **`ITServicesBI`**
-   - Authentication: **`[SELECT YOUR CONFIGURED AUTHENTICATION METHOD]`**
-5. Do not put passwords, tokens, or other credentials in this README, source control, screenshots, or shared files. Use your local approved authentication method and Power BI credential settings.
-6. Apply changes and refresh. Resolve any schema or permission errors against the local database.
-7. Check slicers, page filters, date range, and a sample of totals against SQL before interpreting or sharing report findings.
-
-No server name, file path, username, or password is assumed here. Replace the bracketed placeholders with environment-specific, non-secret details only where appropriate.
-
-## Limitations
-
+Confirm what “revenue” means in the report and whether the project status field and values match these examples. A sum of invoices is not automatically equivalent to cash collected or recognized revenue.
+Key insights
+Fill in this section only after checking actual report values. No numeric findings are asserted here.
+For each finding, record the value, reporting period, relevant filters, and how you validated it. Questions to consider:
+- Which service contributes the largest share of the selected revenue measure?
+- How many projects fall into each status shown in the report?
+- Which clients have the greatest activity in the selected period?
+- How are assignments distributed across employees?
+- What feedback patterns appear, and how many feedback records support them?
+Setup and use
+1. Install or open a compatible version of Power BI Desktop and SQL Server (or SQL Server Express).
+2. Create or restore the ITServicesBI database using the project’s SQL scripts or supplied database backup.
+3. Open the project .pbix file from: [LOCAL PATH TO PBIX].
+4. If prompted, update the SQL Server connection:
+   - Server: [LOCAL SERVER OR INSTANCE]
+   - Database: ITServicesBI
+   - Authentication: [SELECT YOUR CONFIGURED AUTHENTICATION METHOD]
+5. Apply changes and refresh the report. Resolve any source or permission errors against your local database.
+6. Check slicers, page filters, date range, and sample totals against SQL before interpreting report findings.
+No server name, file path, username, or password is assumed here. Do not put passwords, tokens, or other credentials in this README or source control. Use your local authentication settings.
+Limitations
 - The dataset is synthetic and may not reflect real-world distributions, seasonality, costs, service demand, staffing capacity, or customer behavior.
 - Dashboard results depend on the chosen definitions, relationships, filters, and refresh state.
-- Revenue should not be interpreted as profit, cash collected, or recognized revenue unless the source fields and business rules explicitly support that interpretation.
-- Employee utilization requires a defined capacity denominator and treatment of leave, part-time schedules, and overlapping assignments; assignment counts alone do not establish utilization.
-- No actual report values or verified business findings are included in this template.
+- Revenue should not be interpreted as profit, cash collected, or recognized revenue unless the source fields and business rules support that interpretation.
+- Employee utilization requires a defined capacity denominator and treatment of leave, part-time schedules, and overlapping assignments. Assignment counts alone do not establish utilization.
 - This is an analytical portfolio/demo project, not a production operational system or a source of real company records.
-
-## Suggested repository structure
-
+Suggested repository structure
 IT-Services-BI-Dashboard/
 ├── README.md
 ├── docs/
-│   ├── [PROJECT_DOCUMENTATION.md](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/PROJECT_DOCUMENTATION.md)
-│   ├── data_dictionary.md
+│   ├── PROJECT_DOCUMENTATION.md
 │   └── screenshots/
-| 01-executive-overview.png
-| 02-revenue-service-performance.png
-| 03-project-delivery.png
-| 04-client-analytics.png
-| 05-resource-employee-utilization.png
+│       ├── 01-executive-overview.png
+│       ├── 02-revenue-service-performance.png
+│       ├── 03-project-delivery.png
+│       ├── 04-client-analytics.png
+│       └── 05-resource-employee-utilization.png
 ├── powerbi/
 │   └── ITServicesBI_Dashboard.pbix
 ├── sql/
@@ -142,19 +142,13 @@ IT-Services-BI-Dashboard/
 │   └── validation_queries/
 └── assets/
     └── report-preview.png
-```
+Only include files you have permission to share. Avoid committing credentials, private data, or database backups that should not be distributed. Check the PBIX for local paths or credentials before sharing.
+Next steps
+1. Verify the table names, model relationships, measures, and visuals against the PBIX and database.
+2. Add the five page screenshots to docs/screenshots/.
+3. Add the Executive Overview screenshot as assets/report-preview.png.
+4. Replace the setup placeholders with your local non-secret connection details or instructions.
+5. Fill in Key insights with observed values, date range, and filter context.
+6. Review the files for sensitive information and keep the synthetic-data disclaimer before sharing.
 
-Only include files you have permission to share. Avoid committing credentials, private data, or a database backup unless its distribution is appropriate. If the PBIX contains local paths or credentials, clear or parameterize them before sharing.
-
-## Next steps
-
-1. Open the PBIX and verify each page, measure, filter, and data source against this README.
-2. Add a report screenshot and a data dictionary with actual field names and definitions.
-3. Validate key totals against SQL using the same filters and date scope as the report.
-4. Fill in the Key insights section with observed values, period, and filter context.
-5. Replace setup placeholders with your local non-secret connection details or a clear instruction for configuring them.
-6. Review the PBIX and repository for sensitive information before sharing or publishing.
-
-## Documentation
-
-See [`docs/PROJECT_DOCUMENTATION.md`][(docs/PROJECT_DOCUMENTATION.md)](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/PROJECT_DOCUMENTATION.md) for a fuller project record and fill-in checklist.
+You can also download the editable file here: [README.md](C:\Users\user\Documents\Codex\2026-10-16\referenced-chatgpt-conversation-this-is-an\outputs\README.md).
