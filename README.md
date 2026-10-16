@@ -23,7 +23,7 @@ These are intended uses of the dashboard. Confirm the exact definitions and avai
 Adding the screenshot here:
 ## 1. executive-overview
 
-### ![executive-overview][(https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/01-executive-overview.png)](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/docs/screenshots/01-executive-overview.png)
+### ![executive-overview] (https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/docs/screenshots/01-executive-overview.png)
 ## 2. revenue-service-performance
 
 ### ![revenue-service-performance](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/02-revenue-service-performance.png)
