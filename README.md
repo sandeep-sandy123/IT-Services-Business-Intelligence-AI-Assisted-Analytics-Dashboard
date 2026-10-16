@@ -122,7 +122,7 @@ No server name, file path, username, or password is assumed here. Replace the br
 - This is an analytical portfolio/demo project, not a production operational system or a source of real company records.
 
 ## Suggested repository structure
-
+```
 IT-Services-BI-Dashboard/
 ├── README.md
 ├── docs/
