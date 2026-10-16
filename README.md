@@ -122,13 +122,18 @@ No server name, file path, username, or password is assumed here. Replace the br
 - This is an analytical portfolio/demo project, not a production operational system or a source of real company records.
 
 ## Suggested repository structure
-```
+
 IT-Services-BI-Dashboard/
 ├── README.md
 ├── docs/
 │   ├── [PROJECT_DOCUMENTATION.md](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/PROJECT_DOCUMENTATION.md)
 │   ├── data_dictionary.md
 │   └── screenshots/
+| 01-executive-overview.png
+| 02-revenue-service-performance.png
+| 03-project-delivery.png
+| 04-client-analytics.png
+| 05-resource-employee-utilization.png
 ├── powerbi/
 │   └── ITServicesBI_Dashboard.pbix
 ├── sql/
