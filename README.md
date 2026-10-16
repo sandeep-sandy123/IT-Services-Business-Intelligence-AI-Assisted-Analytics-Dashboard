@@ -22,7 +22,8 @@ These are intended uses of the dashboard. Confirm the exact definitions and avai
 
 Add the Executive Overview screenshot here:
 
-![Executive Overview dashboard](assets/report-preview.png)
+![Executive Overview dashboard][(assets/report-preview.png)](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/01-executive-overview.png)
+![revenue-service-performance](assets/report-preview.png)
 
 ## Tools and technologies
 
