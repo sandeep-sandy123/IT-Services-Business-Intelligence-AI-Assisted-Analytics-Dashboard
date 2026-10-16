@@ -2,8 +2,6 @@
 
 An end-to-end Power BI portfolio project for exploring the operational and financial performance of a fictional IT services business. The project combines a SQL Server data source, Power Query preparation, a Power BI data model, DAX measures, and a five-page interactive report.
 
-> **Data notice:** This project uses synthetic data for demonstration and learning. It is not real customer, employee, financial, or operational data, and it must not be presented as proprietary data from Xscade or any other real organization.
-
 ## Project overview
 
 The dashboard brings together client, service, project, staffing, invoice, feedback, and calendar data. It is designed to help users review revenue and service performance, project delivery, client patterns, and resource utilization in one report.
