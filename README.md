@@ -123,11 +123,10 @@ No server name, file path, username, or password is assumed here. Replace the br
 
 ## Suggested repository structure
 
-```text
 IT-Services-BI-Dashboard/
 ├── README.md
 ├── docs/
-│   ├── PROJECT_DOCUMENTATION.md
+│   ├── [PROJECT_DOCUMENTATION.md](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/PROJECT_DOCUMENTATION.md)
 │   ├── data_dictionary.md
 │   └── screenshots/
 ├── powerbi/
