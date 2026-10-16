@@ -26,16 +26,16 @@ Adding the screenshot here:
 ### ![executive-overview](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/docs/screenshots/01-executive-overview.png)
 ## 2. revenue-service-performance
 
-### ![revenue-service-performance](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/02-revenue-service-performance.png)
+### ![revenue-service-performance](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/docs/screenshots/02-revenue-service-performance.png)
 ## 3. project-delivery
 
-### ![project-delivery](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/03-project-delivery.png)
+### ![project-delivery](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/docs/screenshots/03-project-delivery.png)
 ## 4. client-analytics
 
-### ![client-analytics](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/04-client-analytics.png)
+### ![client-analytics](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/docs/screenshots/04-client-analytics.png)
 ## 5. resource-employee-utilization
 
-### ![resource-employee-utilization](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/05-resource-employee-utilization.png)
+### ![resource-employee-utilization](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/docs/screenshots/05-resource-employee-utilization.png)
 
 ---
 ## Tools and technologies
