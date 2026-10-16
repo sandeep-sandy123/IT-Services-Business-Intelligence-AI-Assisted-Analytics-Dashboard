@@ -20,9 +20,11 @@ These are intended uses of the dashboard. Confirm the exact definitions and avai
 
 ## Dashboard preview
 
-Add the Executive Overview screenshot here:
+Adding the screenshot here:
 
 ### ![executive-overview](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/01-executive-overview.png)
+
+### ![revenue-service-performance](https://github.com/sandeep-sandy123/IT-Services-Business-Intelligence-AI-Assisted-Analytics-Dashboard/blob/main/02-revenue-service-performance.png)
 ---
 ## Tools and technologies
 
